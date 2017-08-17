@@ -1,8 +1,8 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let expressValidator = require('express-validator');
-let mustache = require('mustache');
-let data = require(./data.js);
+let mustache = require('mustache-express');
+let data = require('./data.js');
 let app = express();
 
 app.engine('mustache', mustache());
