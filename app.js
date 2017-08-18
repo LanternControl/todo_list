@@ -14,7 +14,12 @@ app.set('views', '/views');
 app.set('view engine', 'mustache');
 
 app.get('/', function (req, res) {
-   res.send('hello');
+   res.render('index', data);
+});
+
+app.post('/', function (req, res){
+  data.push(req.body.data);
+  res.redirect('/');
 });
 
 
