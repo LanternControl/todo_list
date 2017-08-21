@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>To-Do</title>
+  <style>
+  li {list-style-type: none;}
+  </style>
 </head>
 <body>
   <h1>test</h1>
@@ -12,7 +15,7 @@
   </form>
     {{#list}}
     <form class = '' action="/add" method="post">
-    <button type="submit" name="done" value="{{.}}"></button>
+    <p><li><button type="submit" name="done" value="{{.}}"><Submit></button><span>{{.}}</span></li></p>
     </form>
     {{/list}}
     {{#finished}}
