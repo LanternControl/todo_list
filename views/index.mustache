@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>To-Do<title>
+  <title>To-Do</title>
 </head>
 <body>
+  <h1>test</h1>
   <div class= "wrapper">
-  <form action="/", method="post">
+  <form action="/" method="post">
     <p>Enter a new todo item</p>
-      <input type='text', placeholder='new todo', name='todo-text'>
+      <input type='text' placeholder='new todo' name='todoText'/>
   </form>
     {{#list}}
-    <form class = '', action="/add", method="post"
-    <button type="submit" name="complete" value="{{.}}">Submit</button>
+    <form class = '' action="/add" method="post">
+    <button type="submit" name="done" value="{{.}}"></button>
     </form>
     {{/list}}
     {{#finished}}
-    {{.}}
+    <p>{{.}}</p>
     {{/finished}}
   </div>
 </body>
